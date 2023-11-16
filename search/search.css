@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.infonames {
+    display: inline-block;
+    width: 125px;
+    text-align: right;
+}
+
+.p {
+    display: inline-block;
+    width: 200px;
+}
+
+.f {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}

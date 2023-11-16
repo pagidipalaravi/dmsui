@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Application</title>
+    <link rel="stylesheet" href="search.css">
+    <script src="search.js"></script>
+</head>
+
+<body onload="onload();">
+    <form>
+        <div class="infonames">Release Date</div>
+        <label for="rdf" class="f">From<sup>*</sup></label>
+        <input type="date" id="rdf" name="rdf" min="" max="" onchange="enableSubmit()" required>
+        <label for="rdt" class="f">To<sup>*</sup></label>
+        <input type="date" id="rdt" name="rdt" min="" max="" onchange="enableSubmit()" required><br>
+        <label for="shipmentid" class="infonames">Shipment ID</label>
+        <select>
+            <option>Matches</option>
+            <option>Related</option>
+            <option>Starts</option>
+            <option>Ends</option>
+            <option>Substring</option>
+            <option>Not Matches</option>
+        </select>
+        <input type="text" id="shipmentid" name="shipmentid" class="p"><br>
+        <label for="receiverbu" class="infonames">Receiver BU</label>
+        <select>
+            <option>Matches</option>
+            <option>Related</option>
+            <option>Starts</option>
+            <option>Ends</option>
+            <option>Substring</option>
+            <option>Not Matches</option>
+        </select>
+        <input type="text" id="receiverbu" name="receiverbu" class="p"><br>
+        <label for="docsource" class="infonames">Doc Source</label>
+        <select>
+            <option>Matches</option>
+            <option>Related</option>
+            <option>Starts</option>
+            <option>Ends</option>
+            <option>Substring</option>
+            <option>Not Matches</option>
+        </select>
+        <input type="text" id="docsource" name="docsource" class="p"><br>
+        <label for="senderbu" class="infonames">Sender BU</label>
+        <select>
+            <option>Matches</option>
+            <option>Related</option>
+            <option>Starts</option>
+            <option>Ends</option>
+            <option>Substring</option>
+            <option>Not Matches</option>
+        </select>
+        <input type="text" id="senderbu" name="senderbu" class="p"><br>
+        <label for="creatorbu" class="infonames">Creator BU</label>
+        <select>
+            <option>Matches</option>
+            <option>Related</option>
+            <option>Starts</option>
+            <option>Ends</option>
+            <option>Substring</option>
+            <option>Not Matches</option>
+        </select>
+        <input type="text" id="creatorbu" name="creatorbu" class="p"><br>
+        <div class="infonames">EstimationArrivalDate</div>
+        <label for="eadf" class="f">From</label>
+        <input type="date" id="eadf" name="eadf" min="" max="">
+        <label for="eadt" class="f">To</label>
+        <input type="date" id="eadt" name="eadt" min="" max=""><br>
+        <div class="infonames">ActualArrivalDate</div>
+        <label for="aadf" class="f">From</label>
+        <input type="date" id="aadf" name="aadf" min="" max="">
+        <label for="aadt" class="f">To</label>
+        <input type="date" id="aadt" name="aadt" min="" max=""><br>
+        <button type="search" id="search">Search</button>
+        <input type="reset" value="Reset" id="reset">
+        <!--input type="submit" value="Submit" id="submit"-->
+    </form>
+</body>
+
+</html>
