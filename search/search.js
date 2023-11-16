@@ -1,18 +1,16 @@
 function onload() {
-    let releaseDateFrom = new Date();
-    let ninetyDaysAgo = new Date(releaseDateFrom);
-    ninetyDaysAgo.setDate(releaseDateFrom.getDate() - 90);
-    let releaseDateFromFormatted = releaseDateFrom.toISOString().split('T')[0];
-    let ninetyDaysAgoFormatted = ninetyDaysAgo.toISOString().split('T')[0];
-    document.getElementById("rdf").setAttribute("min", ninetyDaysAgoFormatted);
-    document.getElementById("rdf").setAttribute("max", releaseDateFromFormatted);
-    let releaseDateTo = new Date();
-    let ninetyDays = new Date(releaseDateTo);
-    ninetyDays.setDate(releaseDateFrom.getDate() - 90);
-    let releaseDateToFormatted = releaseDateTo.toISOString().split('T')[0];
-    let ninetyDaysFormatted = ninetyDays.toISOString().split('T')[0];
-    document.getElementById("rdt").setAttribute("min", ninetyDaysFormatted);
-    document.getElementById("rdt").setAttribute("max", releaseDateToFormatted);
+    let todayDate = new Date();
+    let ninetyDaysAgo = new Date();
+    ninetyDaysAgo.setDate(todayDate.getDate() - 90);
+    console.log("todayDate = "+ todayDate);
+    console.log("todayDate = "+ ninetyDaysAgo);
+    let todayDateYYYYMMDD = todayDate.toISOString().split('T')[0];
+    let ninetyDaysAgoYYYYMMDD = ninetyDaysAgo.toISOString().split('T')[0];
+    document.getElementById("rdf").setAttribute("min", ninetyDaysAgoYYYYMMDD);
+    document.getElementById("rdf").setAttribute("max", todayDateYYYYMMDD);
+    document.getElementById("rdt").setAttribute("min", ninetyDaysAgoYYYYMMDD);
+    document.getElementById("rdt").setAttribute("max", todayDateYYYYMMDD);
+    /*
     let estimationArrivalDateFrom = new Date();
     let ninety = new Date(estimationArrivalDateFrom);
     ninety.setDate(estimationArrivalDateFrom.getDate() - 90);
@@ -41,6 +39,7 @@ function onload() {
     let ninetyDayssAgoFormatted = ninetyDayssAgo.toISOString().split('T')[0];
     document.getElementById("aadt").setAttribute("min", ninetyDayssAgoFormatted);
     document.getElementById("aadt").setAttribute("max", actualArrivalDateToFormatted);
+    */
     disable();
 }
 function disable() {
@@ -48,8 +47,6 @@ function disable() {
     search.disabled = true;
     let reset = document.getElementById("reset");
     reset.disabled = true;
-    let submit = document.getElementById("submit");
-    submit.disabled = true;
 }
 function enableSubmit() {
     let rdf = document.getElementById("rdf").value;
