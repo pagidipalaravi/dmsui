@@ -10,7 +10,7 @@ function onload() {
     document.getElementById("rdf").setAttribute("max", todayDateYYYYMMDD);
     document.getElementById("rdt").setAttribute("min", ninetyDaysAgoYYYYMMDD);
     document.getElementById("rdt").setAttribute("max", todayDateYYYYMMDD);
-    document.getElementById("eadf").setAttribute("min", ninetyDaysAgoYYYYMMDD);
+    /*document.getElementById("eadf").setAttribute("min", ninetyDaysAgoYYYYMMDD);
     document.getElementById("eadf").setAttribute("max", todayDateYYYYMMDD);
     document.getElementById("eadt").setAttribute("min", ninetyDaysAgoYYYYMMDD);
     document.getElementById("eadt").setAttribute("max", todayDateYYYYMMDD);
@@ -18,7 +18,7 @@ function onload() {
     document.getElementById("aadf").setAttribute("max", todayDateYYYYMMDD);
     document.getElementById("aadt").setAttribute("min", ninetyDaysAgoYYYYMMDD);
     document.getElementById("aadt").setAttribute("max", todayDateYYYYMMDD);
-
+    */
     disable();
 }
 function disable() {
