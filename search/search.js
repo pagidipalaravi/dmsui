@@ -10,36 +10,15 @@ function onload() {
     document.getElementById("rdf").setAttribute("max", todayDateYYYYMMDD);
     document.getElementById("rdt").setAttribute("min", ninetyDaysAgoYYYYMMDD);
     document.getElementById("rdt").setAttribute("max", todayDateYYYYMMDD);
-    /*
-    let estimationArrivalDateFrom = new Date();
-    let ninety = new Date(estimationArrivalDateFrom);
-    ninety.setDate(estimationArrivalDateFrom.getDate() - 90);
-    let estimationArrivalDateFromFormatted = estimationArrivalDateFrom.toISOString().split('T')[0];
-    let ninetyFormatted = ninety.toISOString().split('T')[0];
-    document.getElementById("eadf").setAttribute("min", ninetyFormatted);
-    document.getElementById("eadf").setAttribute("max", estimationArrivalDateFromFormatted);
-    let estimationArrivalDateTo = new Date();
-    let ninetyDayss = new Date(estimationArrivalDateTo);
-    ninetyDayss.setDate(estimationArrivalDateTo.getDate() - 90);
-    let estimationArrivalDateToFormatted = estimationArrivalDateTo.toISOString().split('T')[0];
-    let ninetyDayssFormatted = ninetyDayss.toISOString().split('T')[0];
-    document.getElementById("eadt").setAttribute("min", ninetyDayssFormatted);
-    document.getElementById("eadt").setAttribute("max", estimationArrivalDateToFormatted);
-    let actualArrivalDateFrom = new Date();
-    let daysAgo = new Date(actualArrivalDateFrom);
-    daysAgo.setDate(actualArrivalDateFrom.getDate() - 90);
-    let actualArrivalDateFromFormatted = actualArrivalDateFrom.toISOString().split('T')[0];
-    let daysAgoFormatted = daysAgo.toISOString().split('T')[0];
-    document.getElementById("aadf").setAttribute("min", daysAgoFormatted);
-    document.getElementById("aadf").setAttribute("max", actualArrivalDateFromFormatted);
-    let actualArrivalDateTo = new Date();
-    let ninetyDayssAgo = new Date(actualArrivalDateTo);
-    ninetyDayssAgo.setDate(actualArrivalDateTo.getDate() - 90);
-    let actualArrivalDateToFormatted = actualArrivalDateTo.toISOString().split('T')[0];
-    let ninetyDayssAgoFormatted = ninetyDayssAgo.toISOString().split('T')[0];
-    document.getElementById("aadt").setAttribute("min", ninetyDayssAgoFormatted);
-    document.getElementById("aadt").setAttribute("max", actualArrivalDateToFormatted);
-    */
+    document.getElementById("eadf").setAttribute("min", ninetyDaysAgoYYYYMMDD);
+    document.getElementById("eadf").setAttribute("max", todayDateYYYYMMDD);
+    document.getElementById("eadt").setAttribute("min", ninetyDaysAgoYYYYMMDD);
+    document.getElementById("eadt").setAttribute("max", todayDateYYYYMMDD);
+    document.getElementById("aadf").setAttribute("min", ninetyDaysAgoYYYYMMDD);
+    document.getElementById("aadf").setAttribute("max", todayDateYYYYMMDD);
+    document.getElementById("aadt").setAttribute("min", ninetyDaysAgoYYYYMMDD);
+    document.getElementById("aadt").setAttribute("max", todayDateYYYYMMDD);
+
     disable();
 }
 function disable() {
@@ -56,5 +35,10 @@ function enableSubmit() {
     if (rdf !== "" && rdt != "") {
         let search = document.getElementById("search");
         search.disabled = false;
+    }
+    let toDate = document.getElementById("rdt");
+    if (toDate !== "") {
+        toDate.disable = false;
+        toDate.setAttribute("min", rdf);
     }
 }
