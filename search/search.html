@@ -14,6 +14,12 @@
         <input type="date" id="rdf" name="rdf" min="" max="" onchange="enableSubmit()" required>
         <label for="rdt" class="f">To<sup>*</sup></label>
         <input type="date" id="rdt" name="rdt" min="" max="" onchange="enableSubmit()" required><br>
+        <div class="infonames">Doc Source</div>
+        <select>
+            <option>Scanned</option>
+            <option>FTP</option>
+            <option>Upload</option>
+        </select><br>
         <label for="shipmentid" class="infonames">Shipment ID</label>
         <select>
             <option>Matches</option>
@@ -21,43 +27,30 @@
             <option>Starts</option>
             <option>Ends</option>
             <option>Substring</option>
-            <option>Not Matches</option>
         </select>
         <input type="text" id="shipmentid" name="shipmentid" class="p"><br>
         <label for="receiverbu" class="infonames">Receiver BU</label>
         <select>
             <option>Matches</option>
-            <option>Related</option>
             <option>Starts</option>
             <option>Ends</option>
             <option>Substring</option>
-            <option>Not Matches</option>
         </select>
         <input type="text" id="receiverbu" name="receiverbu" class="p"><br>
-        <div class="infonames">Doc Source</div>
-        <select>
-            <option>Scanned</option>
-            <option>FTP</option>
-            <option>Upload</option>
-        </select><br>
         <label for="senderbu" class="infonames">Sender BU</label>
         <select>
             <option>Matches</option>
-            <option>Related</option>
             <option>Starts</option>
             <option>Ends</option>
             <option>Substring</option>
-            <option>Not Matches</option>
         </select>
         <input type="text" id="senderbu" name="senderbu" class="p"><br>
         <label for="creatorbu" class="infonames">Creator BU</label>
         <select>
             <option>Matches</option>
-            <option>Related</option>
             <option>Starts</option>
             <option>Ends</option>
             <option>Substring</option>
-            <option>Not Matches</option>
         </select>
         <input type="text" id="creatorbu" name="creatorbu" class="p"><br>
         <!--div class="infonames">EstimationArrivalDate</div>
