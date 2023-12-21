@@ -5,7 +5,7 @@ body {
 
 .infonames {
     display: inline-block;
-    width: 125px;
+    width: 200px;
     text-align: right;
 }
 
@@ -16,6 +16,12 @@ body {
 
 .f {
     display: inline-block;
-    width: 100px;
+    width: 80px;
     text-align: right;
+}
+
+.position {
+    position: relative;
+    left: 84px;
+    width: 200px;
 }

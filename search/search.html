@@ -14,12 +14,14 @@
         <input type="date" id="rdf" name="rdf" min="" max="" onchange="enableSubmit()" required>
         <label for="rdt" class="f">To<sup>*</sup></label>
         <input type="date" id="rdt" name="rdt" min="" max="" onchange="enableSubmit()" required><br>
+
         <div class="infonames">Doc Source</div>
         <select>
             <option>Scanned</option>
             <option>FTP</option>
             <option>Upload</option>
         </select><br>
+
         <label for="shipmentid" class="infonames">Shipment ID</label>
         <select>
             <option>Matches</option>
@@ -29,6 +31,7 @@
             <option>Substring</option>
         </select>
         <input type="text" id="shipmentid" name="shipmentid" class="p"><br>
+
         <label for="receiverbu" class="infonames">Receiver BU</label>
         <select>
             <option>Matches</option>
@@ -37,6 +40,17 @@
             <option>Substring</option>
         </select>
         <input type="text" id="receiverbu" name="receiverbu" class="p"><br>
+
+        <label for="receivingCountry" class="infonames">Receiving Country</label>
+        <input type="text" id="receivingCountry" name="receivingCountry" list="receivingCountryList" class="position" onchange="multiple();" multiple><br>
+        <datalist id="receivingCountryList">
+            <option value="Russia">
+            <option value="Germany">
+            <option value="United Kingdom">
+            <option value="France">
+            <option value="Italy">
+        </datalist>
+        
         <label for="senderbu" class="infonames">Sender BU</label>
         <select>
             <option>Matches</option>
@@ -45,7 +59,34 @@
             <option>Substring</option>
         </select>
         <input type="text" id="senderbu" name="senderbu" class="p"><br>
-        <label for="creatorbu" class="infonames">Creator BU</label>
+
+        <label for="sendingCountry" class="infonames">Sending Country</label>
+        <input type="text" id="sendingCountry" name="sendingCountry" class="position" multiple><br>
+        
+        <label for="originbu" class="infonames">Origin BU</label>
+        <select>
+            <option>Matches</option>
+            <option>Starts</option>
+            <option>Ends</option>
+            <option>Substring</option>
+        </select>
+        <input type="text" id="originbu" name="originbu" class="p"><br>
+
+        <label for="originCountry" class="infonames">Origin Country</label>
+        <input type="text" id="originCountry" name="originCountry" class="position" multiple><br>
+
+        <label for="destinationbu" class="infonames">Destination BU</label>
+        <select>
+            <option>Matches</option>
+            <option>Starts</option>
+            <option>Ends</option>
+            <option>Substring</option>
+        </select>
+        <input type="text" id="destinationbu" name="destinationbu" class="p"><br>
+
+        <label for="destinationCountry" class="infonames">Destination Country</label>
+        <input type="text" id="destinationCountry" name="destinationCountry" class="position" multiple><br>
+        <!--label for="creatorbu" class="infonames">Creator BU</label>
         <select>
             <option>Matches</option>
             <option>Starts</option>
@@ -53,7 +94,7 @@
             <option>Substring</option>
         </select>
         <input type="text" id="creatorbu" name="creatorbu" class="p"><br>
-        <!--div class="infonames">EstimationArrivalDate</div>
+        <div class="infonames">EstimationArrivalDate</div>
         <label for="eadf" class="f">From</label>
         <input type="date" id="eadf" name="eadf" min="" max="">
         <label for="eadt" class="f">To</label>
