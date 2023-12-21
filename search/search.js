@@ -43,12 +43,11 @@ function enableSubmit() {
     }
 }
 
-function multiple() {
+function multiple1() {
     const inputsWithList = document.querySelectorAll('input[list][multiple]');
-
     if (inputsWithList && inputsWithList.length) {
         inputsWithList.forEach(function ( /** @type {HTMLInputElement} */ input) {
-            if (input.type !== 'text' && input.type !== 'file') {
+            if (input.type !== 'email' && input.type !== 'file') {
                 input.addEventListener('input', function ( /** @type {Event|InputEvent} */ event) {
 
                     /** @type {HTMLInputElement} */
