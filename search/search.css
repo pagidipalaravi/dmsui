@@ -25,3 +25,7 @@ body {
     left: 84px;
     width: 200px;
 }
+
+div {
+    margin: 3px 0px;
+}
