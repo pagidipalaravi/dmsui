@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { MultipleFileUploadComponent } from './multiple-file-upload/multiple-file-upload.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    MultipleFileUploadComponent
   ],
   imports: [
     BrowserModule,

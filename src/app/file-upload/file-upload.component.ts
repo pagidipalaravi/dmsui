@@ -9,7 +9,7 @@ import { FileUploadService } from '../service/file-upload.service';
 export class FileUploadComponent implements OnInit {
   shortLink: string = "";
   loading: boolean = false;
-  file: File | null = null;
+  file: File | any = null;
 
   constructor(private fileUploadService: FileUploadService) { }
 
