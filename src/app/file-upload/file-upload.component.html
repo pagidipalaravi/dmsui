@@ -1,0 +1,15 @@
+<p>file-upload works!</p>
+
+<div> 
+    <input type="file" (change)="onChange($event)"> 
+  
+    <button (click)="onUpload()"> Upload </button> 
+</div> 
+<div class="container" *ngIf="loading"> 
+    <h3>Loading ...</h3> 
+</div>
+
+<div *ngIf="shortLink"> 
+    <h2> Visit Here</h2> 
+    <a href="{{shortLink}}">{{shortLink}}</a> 
+</div> 
