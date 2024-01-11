@@ -15,7 +15,7 @@ export class MultipleFileUploadComponent implements OnInit {
   progressInfos: any[] = [];
   message: string[] = [];
 
-  fileInfos!: Observable<any>;
+  fileInfos?: Observable<any>;
   constructor(private fileUploadService: FileUploadService) { }
 
   selectFiles(event : any): void {
